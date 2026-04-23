@@ -1,0 +1,10 @@
+frase = "   A Ciência de hoje é a Tecnologia de Amanhã  "
+st = frase.strip()
+print(st)
+caixa_alta = st.upper()
+print(caixa_alta)
+frase = frase.strip().capitalize()
+print(frase)
+mudanca_frase = frase.replace('de', 'do')
+print(mudanca_frase)
+print(frase)
