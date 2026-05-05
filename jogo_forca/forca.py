@@ -33,3 +33,5 @@ if __name__ == "__main__":
         letras_chutadas = letras_chutadas + letra
         segredo = secret_word(palavra, letras_chutadas)
         #Como eu sei se a letra digitada é um acerto ou um erro?
+        #Como resolvo o problema das letras maiúsculas
+        #O que fazer com palavras compostas?
