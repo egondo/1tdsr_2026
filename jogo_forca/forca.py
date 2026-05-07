@@ -1,4 +1,5 @@
 #crie as funcoes logo no começo do seu projeto
+import random
 
 def secret_word(secret: str, chutes: str) -> str:
     resp = ''
@@ -19,11 +20,18 @@ def enforcado(erros) -> bool:
         return True
     return False
 
+def sorteia_palavra() -> str:
+    #representar um conjunto ou uma sequencia de estados norte americanos, sortear um desses estados para a palavra do jogo da Forca
+    estados = ["North Dakota", "South Dakota", "New York", "California", "Florida", "Texas", "Massashusets", "Illinois", "Montana", "Nevada", "Utah", "Rhode Island", "Georgia", "Alaska", "Ohio", "Hawai", "Minessota", "Arizona", "Michigan", "Colorado", "Lousiana", "South Caroline", "North Caroline", "Washington", "Idaho", "Alabana", "Arkansas", "Connecticut", "Virginia"]
+
+    pos = random.randint(0, len(estados))
+
+    return estados[pos]
 
 #para separar as funcoes do programa principal, fazemos o seguinte:
 if __name__ == "__main__":
-    palavra = "Africa do Sul"
-    letras_chutadas = ''
+    palavra = sorteia_palavra()
+    letras_chutadas = ' '
     erros = 0
     segredo = secret_word(palavra, letras_chutadas)
     while not enforcado(erros) and not acertou(segredo):
@@ -36,5 +44,7 @@ if __name__ == "__main__":
         if not letra in palavra:
             erros = erros + 1
         
-        #O que fazer com palavras compostas?
-        #E finalizar o programa com uma resposta.
+    if acertou(segredo):
+        print(f"Parabéns, vc acertou {palavra}")
+    else:
+        print(f"Você foi enforcado a palavra é {palavra}")
