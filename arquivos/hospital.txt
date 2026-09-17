@@ -1,0 +1,5 @@
+MED;Jorge Tavares;823432;clinico;jorge@gmail.com
+MED;Alessandra Ferreira;923432;clinico;ale@gmail.com
+PAC;Luisa Bertoldo;734234;(11) 923432;luisa@gmail.com;Intermed
+MED;Mario Dias;723423;alergista;mariodias@gmail.com
+MED;Daniela Gomes;6242;pediatra;dani@gmail.com
