@@ -1,0 +1,21 @@
+[
+    {
+        "titulo": "Minecraft",
+        "plataforma": [
+            "PC",
+            "XBox",
+            "PS"
+        ],
+        "genero": "Aventura",
+        "desenvolvedor": "Mojang"
+    },
+    {
+        "titulo": "The Last of Us",
+        "plataforma": [
+            "PC",
+            "PS"
+        ],
+        "genero": "A\u00e7\u00e3o",
+        "desenvolvedor": "Naughty Dog"
+    }
+]
