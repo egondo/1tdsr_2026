@@ -26,7 +26,9 @@ def insere_pergunta():
     enquete.perguntas.append(perg)
     return perg, 200
 
-
+@app.route("/ap1/v1/perguntas", method="PUT")
+def altera_pergunta(id):
+    #fazer a alteraçao do disco do sistema
 
 
 app.run(debug=True)
