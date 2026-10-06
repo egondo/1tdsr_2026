@@ -26,13 +26,26 @@ def insere_pergunta():
     enquete.perguntas.append(perg)
     return perg, 200
 
-@app.route("/api/v1/perguntas", method="PUT")
+@app.route("/api/v1/perguntas/<int:id>", method="PUT")
 def altera_pergunta(id):
+    lista = enquete.perguntas
+    nova_pergunta = request.json
+    for i in range(len(lista)):
+        
+        if (lista[i]['id'] == id) {
+            enquete.perguntas.insert(i, nova_pergunta)
+        }
     #fazer a alteraçao do disco do sistema
 
 
-@app.route("/api/v1/perguntas/", method="DELETE")
-def altera_pergunta(id):
+@app.route("/api/v1/perguntas/<int:id>", method="DELETE")
+def apaga_pergunta(id):
+    lista = enquete.perguntas
+    for obj in lista:
+        
+        if (obj['id'] == id) {
+            enquete.perguntas.pop(obj)
+        }
     #fazer a alteraçao do disco do sistema
 
 app.run(debug=True)
