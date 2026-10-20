@@ -12,6 +12,14 @@ select nome, vitorias, empates, derrotas, vitorias * 3 + empates as pontos,
 vitorias + empates + derrotas as jogos from clube order by pontos desc
 '''
 
+def consulta_tudo():
+    sql = '''select nome, vitorias, empates, derrotas, vitorias * 3 + empates as pontos, vitorias + empates + derrotas as jogos from clube order by pontos desc'''
+    with get_conexao() as con:
+        with con.cursor() as cur:
+            cur.execute(sql)
+            return cur.fetchall()
+    
+
 
 def get_conexao():
     return oracledb.connect(user="pf0313", password= "professor#23", dsn="oracle.fiap.com.br/orcl")
@@ -60,3 +68,8 @@ def insert_partida(partida: dict):
             cur.execute(sql, partida)
         con.commit()
 
+
+if __name__ == "__main__":
+    tabela = consulta_tudo()
+    for linha in tabela:
+        print(linha)
