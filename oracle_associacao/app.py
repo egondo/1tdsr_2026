@@ -15,7 +15,8 @@ def cadastra_partida():
         service.cadastra_partida(partida)
         info = {"title": "Partida cadastrada com sucesso!", "status": 201} 
         return info, 201
-    except erro as Exception:
+    except Exception as erro:
+        print(erro)
         info = {"title": "Erro cadastrando a partida", "status": 404}
         return info, 404
 
